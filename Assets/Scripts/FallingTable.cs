@@ -29,7 +29,7 @@ public class FallingTable : MonoBehaviour
 
     private void Awake()
     {
-        Body.velocity = Vector3.down * _fallSpeed;
+        // Body.velocity = Vector3.down * _fallSpeed;
     }
 
     private void Update()
@@ -39,6 +39,7 @@ public class FallingTable : MonoBehaviour
             _horizontalVelocity = Input.GetAxis("Horizontal") * _horizontalSpeed * Time.deltaTime;
         }
 
-        Body.velocity += Vector3.forward * _horizontalVelocity;
+        transform.Translate(Vector3.forward * _horizontalVelocity);
+        // Body.velocity += Vector3.forward * _horizontalVelocity;
     }
 }

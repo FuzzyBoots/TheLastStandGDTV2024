@@ -29,11 +29,20 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
+    private IEnumerator SpawnTables()
+    {
+        while(true) {
+            Instantiate(_tableModel, new Vector3(Random.Range(-12, 12) / 48f, 5f, 0f), Quaternion.identity);
+
+            yield return new WaitForSeconds(3f);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        // StartCoroutine(SpawnTables());
-        SpawnNext();
+        StartCoroutine(SpawnTables());
+        // SpawnNext();
     }
 
     public void SpawnNext()

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1664442512801259592}
   - component: {fileID: 6832858603520205121}
   - component: {fileID: -7797296820573488018}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Legs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,8 +54,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.6726385, y: 0.78365326, z: 0.1289484}
-  m_Center: {x: 0, y: 0.35817337, z: 0}
+  m_Size: {x: 1.6726385, y: 0.5553467, z: 0.1289484}
+  m_Center: {x: 0, y: 0.2440201, z: 0}
 --- !u!114 &-7797296820573488018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,9 +120,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1759327626781227444, guid: 48b788808012c024a9967a89a72a56a9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3294754385639437531, guid: 48b788808012c024a9967a89a72a56a9, type: 3}
       propertyPath: m_Name
       value: Wooden Pillar {3} 0.75M (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294754385639437531, guid: 48b788808012c024a9967a89a72a56a9, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -186,9 +194,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1759327626781227444, guid: 48b788808012c024a9967a89a72a56a9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3294754385639437531, guid: 48b788808012c024a9967a89a72a56a9, type: 3}
       propertyPath: m_Name
       value: Wooden Pillar {3} 0.75M (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294754385639437531, guid: 48b788808012c024a9967a89a72a56a9, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
