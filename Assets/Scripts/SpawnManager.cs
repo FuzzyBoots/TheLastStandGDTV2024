@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -6,8 +7,10 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField] GameObject _tableModel;
+    [SerializeField] private Transform _furnitureContainer;
 
     static SpawnManager _instance;
+    private float _highestY;
 
     public static SpawnManager Instance
     {
@@ -32,8 +35,9 @@ public class SpawnManager : MonoBehaviour
     private IEnumerator SpawnTables()
     {
         while(true) {
-            Instantiate(_tableModel, new Vector3(Random.Range(-12, 12) / 48f, 5f, 0f), Quaternion.identity);
-
+            GameObject spawned = Instantiate(_tableModel, new Vector3(Random.Range(-12, 12) / 48f, _highestY + 2f, 0f), Quaternion.identity);
+            Debug.Log($"Spawned at {spawned.transform.position}");
+            spawned.transform.parent = _furnitureContainer;
             yield return new WaitForSeconds(3f);
         }
     }
@@ -45,8 +49,11 @@ public class SpawnManager : MonoBehaviour
         // SpawnNext();
     }
 
-    public void SpawnNext()
+    internal void SetHighestPoint(float highestY)
     {
-        Instantiate(_tableModel, new Vector3(0f, 10f, Random.Range(-25, 25) / 2f), Quaternion.identity);
+        _highestY = highestY;
+        Vector3 position = transform.position;
+        position.y = highestY + 2f;
+        transform.DOMove(position, 1);
     }
 }
