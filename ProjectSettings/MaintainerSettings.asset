@@ -90,7 +90,7 @@ MonoBehaviour:
     findUnreferencedScripts: 0
     findEmptyFolders: 1
     findEmptyFoldersAutomatically: 0
-    useTrashBin: 1
+    useTrashBin: 0
     rescanAfterContextIgnore: 1
     ignoreEditorAssets: 1
   referencesFinderSettings:
